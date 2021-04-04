@@ -3,14 +3,14 @@ import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
 import Details from '../details';
 
-import { FormInput, FormButton } from '../formFields';
-
 import history from '../../history'
+
+import { FormInput, FormButton } from '../formFields';
 
 class SignUpForm extends Component {
     render() {
         const { className, handleSubmit } = this.props;
-        const links = [
+        const info = [
           {
             _id: 0,
             title: 'at least 6 character'
@@ -46,7 +46,7 @@ class SignUpForm extends Component {
                 placeholder='Password'
                 name='password'
                 component={FormInput}/>
-                <Field className= 'sign-up-form__confirm-password'
+                <Field className= 'sign-up-form__confirm'
                 type='password'
                 title='Confirm Password'
                 placeholder='Confirm Password'
@@ -56,20 +56,20 @@ class SignUpForm extends Component {
 
                 <div className= 'sign-up-form__line'></div>
                 <Field className= 'sign-up-form__back'
-                onClick={() => console.log('Back')}
+                onClick={() => history.push('/signin') }
                 type='button'
                 title='back'
                 name='Back'
                 short={true}
                 component={FormButton}/>
-                <Field className= 'sign-up-form__createAccount'
-                onClick={() => console.log('Create account')}
+                <Field className= 'sign-up-form__create'
+                onClick={() => history.push('/account') }
                 type='submit'
                 title='Create Account'
                 name='create account'
                 component={FormButton}/>
                 
-                <Details className= 'sign-up-form__details' title='Password requirements' links={links}/>
+                <Details className= 'sign-up-form__details' title='Password requirements' links={info}/>
             </form>
         )
     }
