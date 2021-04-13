@@ -17,20 +17,20 @@ class Account extends Component {
         _id: 1,
         title: "Logout",
         path: '/',
-      },
-    ];
+      }
+    ]
 
     const navbarLinks = [
       {
         _id: 0,
         title: "Purchase History",
-        actve: false,
+        active: true,
         component: <PurchaseHistory />,
       },
       {
         _id: 1,
         title: "Account Informaiton",
-        active: true,
+        active: false,
         component: <AccountInformation />,
       },
     ];
@@ -52,7 +52,11 @@ class Account extends Component {
   }
 
   render() {
-    return <div>{this.renderContent()}</div>;
+    return (
+    <div className='account'> 
+    {this.renderContent()}
+    </div>
+    )
   }
 }
 
