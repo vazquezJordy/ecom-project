@@ -1,11 +1,18 @@
-import {
-   SET_USER_PURCHASES,
-   SET_PURCHASE_DETAIL
- } from "../actions/types";
+import { SET_USER_PURCHASES, SET_PURCHASE_DETAIL } from "../actions/types";
 
 const INITIAL_STATE = {
   purchases: [],
-  purchaseDetail: {}
+  purchaseDetail: {
+    _id: -1,
+    total: 0,
+    orderNumber: "",
+    orderDate: null,
+    creditCard: "",
+    user: {
+      name: "",
+      shippingAddress: "",
+    },
+  },
 };
 
 export default function (state = INITIAL_STATE, action) {
@@ -22,11 +29,11 @@ export default function (state = INITIAL_STATE, action) {
         if ((purchase._id = action.payload)) {
           purchaseDetail = purchase;
         }
-      })
+      });
       return {
         ...state,
         purchaseDetail,
-      }
+      };
     default:
       return state;
   }
