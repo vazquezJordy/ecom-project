@@ -1,4 +1,4 @@
-import {
+import { 
     setHeaderLinks,
     setNavbarLinks,
     changeNavbarActive
@@ -7,12 +7,13 @@ import {
 import {
     fetchUserPurchases,
     setPurchaseDetail
-} from './user'
+} from './user';
 
 export {
     setHeaderLinks,
     setNavbarLinks,
     changeNavbarActive,
+
     fetchUserPurchases,
     setPurchaseDetail
 };

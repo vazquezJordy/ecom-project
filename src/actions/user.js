@@ -1,7 +1,7 @@
-import {
+import { 
     SET_USER_PURCHASES,
     SET_PURCHASE_DETAIL
-}from './types'
+} from './types';
 
 export function setPurchaseDetail(_id) {
     return ({
@@ -11,7 +11,7 @@ export function setPurchaseDetail(_id) {
 }
 
 export function fetchUserPurchases() {
-    return({
+    return ({
         type: SET_USER_PURCHASES,
         payload: [
             {
