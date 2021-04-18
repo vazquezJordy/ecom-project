@@ -19,7 +19,7 @@ class PurchaseDetail extends Component {
     render() {
         const { className, orderNumber, orderDate, user, total, creditCard } = this.props;
         const { name, shippingAddress } = user;
-        const nameAddress = `${name}       ${shippingAddress}`
+        const nameAddress = `${name} ${shippingAddress}`
         return (
             <div className={`${className} purchase-detail`}>
                 <PurchaseDetailLabel
