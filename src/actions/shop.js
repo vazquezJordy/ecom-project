@@ -55,49 +55,49 @@ export function fetchShopProducts() {
                 title: 'JavaScript in the Browser',
                 description: 'However, this makes your code hard to test and difficult to predict, because your return values depend on side-effects other than your arguments. In functional programming terms, ',
                 price: 1.99,
-                belognsTo: [0,1]
+                belongsTo: [0,1]
             },
             {
                 _id: 1,
                 title: 'Graph Database',
                 description: 'However, this makes your code hard to test and difficult to predict, because your return values depend on side-effects other than your arguments. In functional programming terms, ',
                 price: 1.99,
-                belognsTo: [0,6]
+                belongsTo: [0,6]
             },
             {
                 _id: 2,
                 title: 'Full Stack Development',
                 description: 'However, this makes your code hard to test and difficult to predict, because your return values depend on side-effects other than your arguments. In functional programming terms, ',
                 price: 1.99,
-                belognsTo: [0,1, 4]
+                belongsTo: [0,1, 4]
             },
             {
                 _id: 3,
                 title: 'User Interface Design',
                 description: 'However, this makes your code hard to test and difficult to predict, because your return values depend on side-effects other than your arguments. In functional programming terms, ',
                 price: 1.99,
-                belognsTo: [0,2]
+                belongsTo: [0,2]
             },
             {
                 _id: 4,
                 title: 'JavaScrip Development',
                 description: 'However, this makes your code hard to test and difficult to predict, because your return values depend on side-effects other than your arguments. In functional programming terms, ',
                 price: 1.99,
-                belognsTo: [0,1]
+                belongsTo: [0,1]
             },
             {
                 _id: 5,
                 title: 'User experience Design',
                 description: 'However, this makes your code hard to test and difficult to predict, because your return values depend on side-effects other than your arguments. In functional programming terms, ',
                 price: 1.99,
-                belognsTo: [0,2]
+                belongsTo: [0,2]
             },
             {
                 _id: 6,
                 title: 'Advanced OPP',
                 description: 'However, this makes your code hard to test and difficult to predict, because your return values depend on side-effects other than your arguments. In functional programming terms, ',
                 price: 1.99,
-                belognsTo: [0,6]
+                belongsTo: [0,6]
             },
         ]
     })
