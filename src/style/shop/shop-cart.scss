@@ -61,3 +61,35 @@
         display: grid;
     }
 }
+
+.cart-footer {
+
+    &__checkout {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    
+    height: 38px;
+    width: 183px;
+    border-radius: 20px;
+    background-color: #00CB79;
+
+    font-family: 'Open sans';
+    font-size: 1.6rem;
+    color: white;
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: scale(0.97);
+    }
+    &:active {
+      transform: scale(0.95);
+    }
+
+    &:focus {
+        outline: none;
+    }
+    }
+}
