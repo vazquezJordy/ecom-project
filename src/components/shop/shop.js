@@ -47,7 +47,6 @@ class Shop extends Component {
     handleAddToCart = () => {
         if(document.getElementById('shop-cart').classList.contains('cart-hidden')) {
             document.getElementById('shop-cart').classList.remove('cart-hidden');
-            document.getElementById('cart-button').classList.add('cart-hidden')
         } else {
             document.getElementById('shop-cart').classList.add('cart-hidden');
         }
