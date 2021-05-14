@@ -7,11 +7,11 @@ class ReviewProduct extends Component {
         const {imageUrl, title, price} = product;
         return (
             <div className = 'review-product'>
-                <img className = 'review-prodcut__imgae' src={imageUrl} />
+                <img className = 'review-product__imgae' src={imageUrl} />
                 <div className= 'review-product__title'>{title}</div>
-                <div className= 'review-produc__quantity'>{quantity}</div>
-                <div className= 'review-produc__price'>${price * quantity}</div>
-                <GreenPriceTag className='review-produc__price' title={price * quantity} />
+                <div className= 'review-product__quantity'>{quantity}</div>
+                <div className= 'review-product__price'>${price * quantity}</div>
+                <GreenPriceTag className='review-product__price' title={price * quantity} />
             </div>
         );
     }
