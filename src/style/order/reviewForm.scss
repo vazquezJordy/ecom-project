@@ -1,6 +1,11 @@
 .review-form {
-    display: grid;
-
+    &__legend {
+        grid-row: legend-s/legend-e;
+        grid-column: 1/-1;
+        font-size: 14px;
+        border-bottom: 1px solid #CCC;
+        padding-bottom: 11px;
+    }
     &__products {
         grid-column: 1/-1;
         grid-row: products-s/products-e;
@@ -12,24 +17,18 @@
 
         align-self: center;
     }
-
     &__line {
         grid-column: 1/-1;
         grid-row: line-s/line-e;
         border-top: 1px solid #ccc;
         margin-bottom: 24px;
     }
-
     &__back {
         grid-row: buttons-s/buttons-e;
         grid-column: back-s/back-e;
     }
-
     &__proceed {
         grid-row: buttons-s/buttons-e;
         grid-column: proceed-s/proceed-e;
-
     }
-
-
 }
