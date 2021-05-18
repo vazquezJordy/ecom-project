@@ -5,6 +5,8 @@ import Details from '../details';
 
 import history from '../../history'
 
+import OrderSummary from './orderSummary';
+
 import { FormInput, FormButton } from '../formFields';
 
 class ShippingForm extends Component {
@@ -63,7 +65,7 @@ class ShippingForm extends Component {
                 name='back'
                 short={true}
                 component={FormButton}/>
-                
+                <OrderSummary className='shipping-form__summary'/>
             </form>
         )
     }
