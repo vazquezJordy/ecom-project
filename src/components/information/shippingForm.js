@@ -27,6 +27,13 @@ class ShippingForm extends Component {
                 name='address'
                 component={FormInput}/>
 
+                <Field className= 'shipping-form__city'
+                type='city'
+                title='City'
+                placeholder='City'
+                name='city'
+                component={FormInput}/>
+
                 <Field className= 'shipping-form__state'
                 type='state'
                 title='State'
@@ -49,7 +56,7 @@ class ShippingForm extends Component {
                 name='use-this-address'
                 component={FormButton}/>
 
-                <Field className= 'shipping-form__create'
+                <Field className= 'shipping-form__back'
                 onClick={() => history.push('/account') }
                 type='button'
                 title='Back'
