@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import { reduxForm, Field } from 'redux-form';
 import Details from '../details';
+import {connect} from 'react-redux';
 
 import history from '../../history'
 
@@ -11,7 +12,7 @@ import { UnderlinedTitle } from './infoHelp';
 
 class PaymentForm extends Component {
     render() {
-        const { className, handleSubmit } = this.props;
+        const { className, handleSubmit, name, address } = this.props;
         return (
             <form onSubmit={handleSubmit} className={`${className} payment-form`}> 
              <Field className='payment-form__name'
@@ -60,14 +61,22 @@ class PaymentForm extends Component {
 
                <div className='payment-form__shipping-info shipping-info'>
                     <UnderlinedTitle className='shipping-info__title' title='Shipping to'/>
-                    <div className='shipping-info__name small-text'> Jordy Vazquez</div>
-                    <div className='shipping-info__address small-text'> 1734N Central Park, NY, NY</div>
+                    <div className='shipping-info__name small-text'> {this.props.name}</div>
+                    <div className='shipping-info__address small-text'> {this.props.address}</div>
                 </div>
 
             </form>
         )
     }
 }
+
+
+function mapStateToProps(state){
+    const{address, name} = state.user.user;
+    return ({address, name})
+}
+
+PaymentForm = connect(mapStateToProps)(PaymentForm);
 
 PaymentForm = reduxForm({
     form: 'PaymentForm'
