@@ -8,54 +8,57 @@
         grid-template-columns: [back-s] 137px [back-e space-s] 40px [space-e use-this-address-s] 1fr [use-this-address-e] 1fr;
         grid-row-gap: 15px;
     }
+}
 
-    .shipping-form {
-        &__name {
-            grid-row: name-s/name-e;
-            
-        }
-
-        &__address {
-            grid-row: address-s/address-e;
-        }
-        &__city {
-            grid-row: city-s/city-e;
-        }
-        &__state,
-        &__zipcode {
-            grid-row: state-zip-s/state-zip-e;
-            grid-column: back-s;
-
-            input {
-                width: 200px;
-            }
-        }
-        &__zipcode {
-           transform: translateX(226px);
-        }
-        &__line {
-            grid-row: line-s/line-e;
-            grid-column: 1/-1;
-            border-top: 1px solid #ccc;
-            margin-bottom: 24px;
-        }
-        &__back {
-            grid-row: button-s/button-e;
-            grid-column: back-s/back-e;
-        }
-        &__use-this-address {
-            grid-row: button-s/button-e;
-            grid-column: use-this-address-s/use-this-address-e;
-        }
+.shipping-form {
+    &__name {
+        grid-row: name-s/name-e;
     }
-
-    .shipping {
-        transition: all .3s ease;
+    &__address {
+        grid-row: address-s/address-e;
     }
-
-    @media only screen and (max-width: 600px) {
+    &__city {
+        grid-row: city-s/city-e;
+    }
+    &__state,
+    &__zipcode {
+        grid-row: state-zip-s/state-zip-e;
+        grid-column: back-s;
         input {
-            transform: scale(0.75);
+            width: 200px;
         }
-      }
     }
+    &__zipcode {
+        transform: translateX(226px);
+    }
+    &__line {
+        grid-row: line-s/line-e;
+        grid-column: 1/-1;
+        border-top: 1px solid #ccc;
+        margin-bottom: 24px;
+    }
+    &__back {
+        grid-row: buttons-s/buttons-e;
+        grid-column: back-s/back-e;
+    }
+    &__use-this-address {
+        grid-row: buttons-s/buttons-e;
+        grid-column: use-this-address-s/use-this-address-e;
+    }
+    &__order-summary  {
+        grid-row: name-s;
+        grid-column: use-this-address-e/-1;
+        justify-self: end;
+    }
+}
+
+    // .shipping {
+    //     transition: all .3s ease;
+    // }
+
+    // @media only screen and (max-width: 600px) {
+    //     input {
+    //         transform: scale(0.75);
+    //     }
+    //   }
+    // }

@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 
+import PageTitle from '../pageTitle';
+
+// REDUX 
+
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
-import PageTitle from '../pageTitle';
-import ShippingForm from './shippingForm'
+
+import ShippingForm from './shippingForm';
 
 class Shipping extends Component {
 
@@ -26,6 +30,6 @@ class Shipping extends Component {
     }
 }
 
-Shipping = connect(null, actions)(Shipping)
+Shipping = connect(null, actions)(Shipping);
 
 export default Shipping;
